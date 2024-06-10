@@ -1,4 +1,4 @@
-# Simple Server with Node.js and MongoDB
+# Simple Full Stack Web App with Node.js and MongoDB
 
 This is a basic full-stack application using Node.js, Express, MongoDB for the server side, and HTML/CSS for the client side. The application allows you to create users and store them in a MongoDB database.
 
@@ -15,7 +15,7 @@ This is a basic full-stack application using Node.js, Express, MongoDB for the s
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/mikeyolang/simple-server.git
+    git clone https://github.com/mikeyolang/Simple-Full-Stack-Web-App.git
     cd simple-server
     ```
 
