@@ -20,6 +20,7 @@ document
       if (response.ok) {
         messageElement.textContent = "User created successfully!";
         messageElement.style.color = "green";
+        fetchUsers();
       } else {
         messageElement.textContent = "Error creating user";
       }
@@ -27,3 +28,22 @@ document
       messageElement.textContent = "Error creating user";
     }
   });
+
+async function fetchUsers() {
+  try {
+    const response = await fetch("/api/users");
+    const users = await response.json();
+    const usersList = document.getElementById("usersList");
+    usersList.innerHTML = "";
+    users.forEach((user) => {
+      const li = document.createElement("li");
+      li.textContent = `${user.name} - ${user.email}`;
+      usersList.appendChild(li);
+    });
+  } catch (error) {
+    console.error("Error fetching users:", error);
+  }
+}
+
+// Fetch users on page load
+fetchUsers();
